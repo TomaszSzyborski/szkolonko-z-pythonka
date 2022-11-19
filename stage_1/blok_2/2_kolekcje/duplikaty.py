@@ -11,3 +11,6 @@ for element in lista:
 print("Lista bez duplikatów: ")
 print(lista_bez_duplikatow)
 
+print(lista)
+print(type(set(lista)))
+

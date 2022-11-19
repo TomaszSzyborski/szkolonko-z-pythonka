@@ -15,6 +15,7 @@ agnieszka = {"kwiatek": "hiacynt",
 #
 # print(krystyna["kwiatek"])
 # print(agnieszka["kwiatek"])
+#po , wartość domyslna
 # print(krystyna.get("ozdoby", "wstążka"))
 # print(agnieszka.get("ozdoby", "wstążka"))
 # print(agnieszka.get("ozdoby"))

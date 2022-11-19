@@ -21,3 +21,6 @@ while len(password) < 6:
 # podziekuj za podanie prawidlowego hasla
 print("Prawidlowe haslo")
 
+#lepiej tak używac ogranieczenia pętli
+for _ in range(15):
+    pass

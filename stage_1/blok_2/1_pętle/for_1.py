@@ -6,6 +6,7 @@ for i in x:
 for c in "Anna":
     print(c)
 
+#niepythonowe rozwiazanie!
 magic = "abracadabra"
 for i in range(len(magic)):
     print(i, magic[i])

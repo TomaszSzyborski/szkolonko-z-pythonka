@@ -20,7 +20,7 @@ print(lista_imie)
 
 print(len(lista4))
 
-syntactic sugar
+#syntactic sugar
 sweet_list = [element for element in lista_imie]
 print(sweet_list)
 

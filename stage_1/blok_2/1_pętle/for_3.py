@@ -3,7 +3,9 @@ name = "Janina"
 samogloski = 0
 spolgloski = 0
 
-for litera in name:
+#enumerate zwraca tuple(?)
+for index, litera in enumerate(name):
+    print(index, litera)
     if litera in "aeuioy":
         samogloski += 1
     else:

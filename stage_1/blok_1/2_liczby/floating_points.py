@@ -27,7 +27,7 @@ print(0.3)
 print("{:.17f}".format(0.3))
 print("{:.3f}".format(0.3))
 
-
+#nowszy typ
 print(f"{0.3:.17f}")
 print(f"{0.3:.3f}")
 

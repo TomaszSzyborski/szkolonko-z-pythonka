@@ -42,6 +42,7 @@ age = 27
 string = 'He said his name is {} and he is {} years old.'.format(name, age)
 print(string)
 
+#multiline
 # ukłon w stronę ECMAscript2016
 name = 'Fred'
 seven = 7

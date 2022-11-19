@@ -11,5 +11,18 @@ zweryfikuj dane
 wypisz odpowiedni wynik lub komentarz dotyczący wprowadzonych danych
 """
 
+wynik_egzaminu = int(input("Wpisz wynik egzaminu: "))
 
+if wynik_egzaminu > 89:
+    print(" Ocena 5")
+elif wynik_egzaminu > 79:
+    print(" Ocena 4+")
+elif wynik_egzaminu > 69:
+    print(" Ocena 4")
+elif wynik_egzaminu > 59:
+    print(" Ocena3+")
+elif wynik_egzaminu > 49:
+    print(" Ocena 3")
+else:
+    print("Ocena 1")
 
