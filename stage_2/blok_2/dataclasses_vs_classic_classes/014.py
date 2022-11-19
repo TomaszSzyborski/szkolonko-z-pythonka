@@ -6,7 +6,7 @@
 
 from dataclasses import dataclass, field
 
-from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment_with_author
+from simulated_rest_api.api import get_comment_with_author
 
 
 @dataclass(frozen=True, order=True)

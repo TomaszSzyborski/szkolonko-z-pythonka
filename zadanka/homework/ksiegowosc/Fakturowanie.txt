@@ -1,0 +1,30 @@
+Stwórz 3 klasy
+- klient
+- faktura
+- produkt
+
+W taki sposób, aby móc przygotować fakturę, do której dodasz klienta i szereg produktów.
+W metodzie init klasy Faktura powinien być tylko przekazany Klient (opcjonalnie data wystawienia - patrz nizej)
+do daty wystawienia uzyj obecnego czasu (modul datetime) lub daty przekazanej w stringu
+
+Produkt powinien zawierać nazwę, cenę netto i stawkę VAT (procent)
+- kowota VAT i kwota brutto powinna byc obliczana automatycznie
+
+Klient powinien zawierac nazwe firmy, NIP i adres oraz liczbe dni do zaplaty faktury.
+
+Data zaplaty powinna byc obliczna w klasie Faktura na podstawie danych z klasy Klient.
+
+Metody w Klasie faktura powinny przyjomwać instancje klasy Klient i klasy Produkt
+oraz odpowiednio modyfikować instancję Faktury
+
+Skorzystaj z zadań i przykladów z dnia 9
+Skorzystaj z User Interface kotry zrobiles w dniu 5
+Dodatkowo, mozesz zapisac fakture do pliku tekstowego korzystajac z wiedzy z dnia 7 i 8
+
+
+Hints:
+Skorzystaj z modulu datetime -> https://docs.python.org/3/library/datetime.html
+
+Skorzystaj z type hinting czyli nazw typów po dwukropku tak jak ponizej:
+w klasie Faktura:
+    def __init__(self, klient_na_fv: Klient, data_wystawienia: str):

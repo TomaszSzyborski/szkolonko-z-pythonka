@@ -5,7 +5,7 @@
 import copy
 from pprint import pprint
 
-from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment
+from simulated_rest_api.api import get_comment
 
 
 class Comment:

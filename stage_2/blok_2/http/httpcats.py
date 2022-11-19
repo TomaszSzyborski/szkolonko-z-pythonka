@@ -1,0 +1,15 @@
+import requests as r
+
+animal = "dog"
+if animal =="cat":
+    url = "https://http.cat/"
+else:
+    url = "https://httpstatusdogs.com/img/"
+
+resp = r.get(f"{url}200.jpg")
+print(resp.headers)
+print(resp.content)
+
+
+with open(f"{animal}.jpg", "wb") as file:
+    file.write(resp.content)

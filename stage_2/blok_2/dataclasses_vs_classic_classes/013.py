@@ -7,7 +7,7 @@ import copy
 import dataclasses
 from pprint import pprint
 
-from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment_with_author
+from simulated_rest_api.api import get_comment_with_author
 
 
 @dataclasses.dataclass(frozen=True, order=True)

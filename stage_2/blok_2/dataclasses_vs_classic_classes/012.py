@@ -9,7 +9,7 @@ import inspect
 from dataclasses import asdict, astuple, dataclass
 from pprint import pprint
 
-from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment_with_author
+from simulated_rest_api.api import get_comment_with_author
 
 
 @dataclass(frozen=True, order=True)
