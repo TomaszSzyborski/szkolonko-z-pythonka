@@ -54,7 +54,7 @@ print(f"{new_list=}")
 def get_price(price):
     return price if price > 0 else 0
 
-
+#ujemne ceny zerujemy
 original_prices = [1.25, -9.45, 10.22, 3.78, -5.92, 1.16]
 real_prices = [i if i > 0 else 0 for i in original_prices]
 real_prices_v2 = [get_price(i) for i in original_prices]

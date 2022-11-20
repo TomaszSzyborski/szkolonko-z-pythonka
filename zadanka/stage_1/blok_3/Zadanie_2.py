@@ -9,3 +9,26 @@ Dodaj kolumnę "Wiek", wartość ma być obliczona z obecnego roku przy użyciu 
 
 Następnie otwórz plik i wypisz jego zawartość na ekran.
 """
+
+while True:
+    try:
+        name = input("Podaj imię i nazwisko: ")
+        year = input("Podaj date urodzenia: ")
+        year_int = int(year)
+        wiek = 2022 - year_int
+
+        dane = {
+            "imię i nazwisko": name,
+            "data urodzenia": year,
+            "wiek": wiek,
+        }
+
+        with open("dane_zadanie_2.csv" "a") as file:
+            file.write(f"{dane}")
+
+    except ValueError:
+        print("Podaj poprawny rok!")
+
+    except FileNotFoundError:
+        with open("dane_zadanie_2.csv" "x") as file:
+            file.write(f"{dane}")
