@@ -1,0 +1,88 @@
+{
+  //window settings
+  "window.zoomLevel": 2,
+  //explorer settings
+  "explorer.sortOrder": "type",
+  "explorer.compactFolders": false,
+  "debug.toolBarLocation": "docked",
+  //editor settings
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "editor.codeLens": false,
+  "editor.formatOnPaste": true,
+  "editor.cursorStyle": "block",
+  "editor.insertSpaces": true,
+  "editor.hover.enabled": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.renderFinalNewline": true,
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.autoClosingBrackets": "always",
+  "editor.formatOnType": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      // "class": "#ff0000", // change color for tokens of type 'class'
+      // "*.constructor": "#f7c090", // change color for tokens of type '*.constructor'
+      "*.declaration": { "bold": true },
+      // "parameter": {
+      //   "foreground": "#00ff0d" // change color for tokens of type 'parameter'
+      // },
+      // "variable": "#ff0000",
+      "*.static": {
+        "fontStyle": "italic" // all tokens with modifier 'static' should be of italic style
+      },
+      "*.readonly": {
+        "fontStyle": "bold" // all tokens with modifier 'final' should be of bold style
+      }
+    }
+  },
+  //integratedTerminal settings
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontWeightBold": "bold",
+  //files settings
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
+  //screencastMode settings
+  "screencastMode.fontSize": 32,
+  "screencastMode.keyboardOverlayTimeout": 750,
+  "screencastMode.verticalOffset": 10,
+  //workbench settings
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.list.defaultFindMode": "highlight",
+  "workbench.editor.showTabs": true,
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  //use vim hjkl to navigate folders
+  //other settings
+  "tabnine.experimentalAutoImports": true,
+  // "vim.smartRelativeLine": true,
+  //python settings
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.typeCheckingMode": "strict",
+  "python.linting.enabled": true,
+  "python.languageServer": "Pylance",
+  "python.testing.pytestEnabled": true,
+  "python.formatting.provider": "black"
+}

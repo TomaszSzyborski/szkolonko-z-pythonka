@@ -1,0 +1,35 @@
+[
+  { "key": "home", "command": "cursorHome", "when": "editorTextFocus" },
+  {
+    "key": "shift+home",
+    "command": "cursorHomeSelect",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "f5",
+    "command": "workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+
+  // Global keybindings
+  { "key": "ctrl+f", "command": "actions.find" },
+
+  {
+    "key": "alt+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.previousEditor"
+  },
+
+  // Global keybindings using chords (two separate keypress actions)
+  { "key": "ctrl+k enter", "command": "workbench.action.keepEditor" },
+  { "key": "ctrl+k ctrl+w", "command": "workbench.action.closeAllEditors" }
+]
