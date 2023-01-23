@@ -36,6 +36,7 @@
 
 W razie klopotów środowiska uruchomieniowego lokalnie można użyć wirtualnego VSCode:
 https://gitpod.io/workspaces
+współdzielony 
 
 Przydatne inforamcje:
 - Włączyć semantic highlighting w PyCharmie
