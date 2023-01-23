@@ -33,8 +33,13 @@
 2. Web Automation with Selene
 3. Simple DB with TinyDB
 
-W razie klopotów środowiska uruchomieniowego lokalnie można użyć wirtualnego VSCode"
 
+W razie klopotów środowiska uruchomieniowego lokalnie można użyć wirtualnego VSCode:
 https://gitpod.io/workspaces
 
-Presentation Assistant
+Przydatne inforamcje:
+- Włączyć semantic highlighting w PyCharmie
+- Wtyczka: SonarLint
+- Wtyczka: Presentation Assistant
+- Wtyczka do przeglądania plików .md: Markdown Preview Enhanced
+- Github Copilot lub TabNine do autouzupełniania kodu
