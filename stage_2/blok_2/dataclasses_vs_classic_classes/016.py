@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from typing import Optional, cast
 
 import dataclasses_json
+import requests
 from dataclasses_json import dataclass_json, config, LetterCase, Undefined
 
 from simulated_rest_api.api import get_comment_with_author, get_comment, \
@@ -35,6 +36,7 @@ for source in [get_comment_with_author, get_comment, get_comment_with_lots_of_ot
     first, *rest, last = comments_list
     print(comments_list[0])
     print(comments_list[0].to_json())
+    # requests.post("https://example.com", json=first.to_json())
     # with sentinel value defined it sets Author to None if there is no author passed in the JSON
     # as a additional trick it leaves the "Author" if there is not one out of creating json
     #  withoutthe sentinel value we'd have "Author" : null" within the JSON

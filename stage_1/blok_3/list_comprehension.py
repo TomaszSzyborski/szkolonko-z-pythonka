@@ -47,8 +47,18 @@ print(f"{consonants1=}")
 print(f"{consonants=}")
 
 # ale można też odwrócić szyk, żeby rezultat był inny - liczba rezultatów będzie taka sama jak w oryginalnym iterable
+
+
+# warunek ? wartość_jeśli_warunek_True : wartość_jeśli_warunek_False
+# wartość_jeśli_warunek_True if warunek else wartość_jeśli_warunek_False
+
+
+
 new_list = [i if i.isalpha() else "_" for i in sentence.lower()]
 print(f"{new_list=}")
+print(f"{''.join(new_list)}")
+
+
 
 
 def get_price(price):

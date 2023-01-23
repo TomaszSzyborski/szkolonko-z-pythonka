@@ -1,7 +1,7 @@
 import logging
 from dataclasses import dataclass, field
 
-from utils.fake_factory import fake
+from stage_2.blok_2.utils.fake_factory import fake
 
 logging.basicConfig()
 logging.root.setLevel(logging.INFO)

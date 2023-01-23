@@ -13,6 +13,7 @@ class Pracownik:
         '''
         self.imie = imie
         self.stanowisko = stanowisko
+        self.wynagrodzenie = 0
 
         # aktualizujemy pole klasy liczba_pracownikow
         # przy tworzeniu kazdego nowego obiektu Pracownik
@@ -37,7 +38,7 @@ class Pracownik:
 
     def __str__(self):
         '''Własna implementacja dla wydruku obiektu'''
-        return ('{} stanowisko: {} pensja: {}'.format(self.imie, self.stanowisko, self.wynagrodzenie))
+        return f'{self.imie} stanowisko: {self.stanowisko} pensja: {self.wynagrodzenie}'
 
 
     def __del__(self):
@@ -53,53 +54,58 @@ class Pracownik:
 print('--- Tworzymy dwoch pracownikow i okreslamy wynagrodzenia ---')
 prac1 = Pracownik('John Turturo', 'aktor')
 prac2 = Pracownik('John Travolta', 'gwiazda')
-prac1.ustaw_wynagrodzenie(5000)
-prac2.ustaw_wynagrodzenie(8000)
+print(prac1.wynagrodzenie)
+prac1.typ_umowy = 'umowa o prace'
+print(prac1.typ_umowy)
+print(prac1.__dict__)
 print(prac1)
-print(prac2)
-
-print('\n--- Sprawdzamy liczbe pracownikow - wyswietlamy pole klasy liczba_pracownikow ---')
-print('Pracownik.liczba_pracowników =', Pracownik.liczba_pracownikow)
-print('prac1.liczba_pracownikow =', prac1.liczba_pracownikow)
-print('prac2.liczba_pracownikow =', prac2.liczba_pracownikow)
-
-print('\n --- wysokość podwyżki ---')
-print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
-print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
-print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
-
-print('\n--- zmieniamy wys podwyzki na 8 ---')
-Pracownik.roczna_podwyzka = 8
-print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
-print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
-print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
-
-print('\n--- Patrzymy w namespace (__dict__) i widzimy do jakich atrybutow maja dostęp ---')
-print('\nPracownik.__dict__:\n',Pracownik.__dict__)
-print('\nprac1.__dict__:\n',prac1.__dict__)
-print('\nprac2.__dict__:\n',prac2.__dict__)
-
-print('\nJak widzimy instancje nie mają pola roczna_podwyzka, dlatego szukaja go wyzej w klasie')
-
-print('\n--- zmieniamy wys podwyzki w instancji prac2 na 12 ---')
-print('Jak widać wyżej, w __dict__ instancji prac2 nie ma pola roczna_podwyzka')
-prac2.roczna_podwyzka = 12
-print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
-print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
-print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
-print('\nWidzimy, ze wartosc zmienila sie tylko dla instancji prac2.')
-print("Zajrzyjmy jeszcze raz do namespace'ów:")
-print('\nPracownik.__dict__:\n',Pracownik.__dict__)
-print('\nprac1.__dict__:\n',prac1.__dict__)
-print('\nprac2.__dict__:\n',prac2.__dict__)
-
-print('Jak widzimy, teraz obiekt prac2 ma własną zmienną roczna_podwyzka, i z niej bedzie brac wartosc.')
-print('Obiekt prac1 nie ma takiej zmiennej, wiec dalej bedzie korzystac z wartosci w polu klasy\n')
-
-# del (prac2.roczna_podwyzka)
-print('--- Usuwamy pracownika prac2 ---')
-del prac2
-print(Pracownik.liczba_pracownikow)
-
-print('\n--- Teraz program się kończy i Python sam usuwa wszystkie pozostałe obiekty ---')
-print('--- Automatycznie wywoła destruktor __del__ dla pozostałych obiektów: ---\n')
+# prac1.ustaw_wynagrodzenie(5000)
+# prac2.ustaw_wynagrodzenie(8000)
+# print(prac1)
+# print(prac2)
+#
+# print('\n--- Sprawdzamy liczbe pracownikow - wyswietlamy pole klasy liczba_pracownikow ---')
+# print('Pracownik.liczba_pracowników =', Pracownik.liczba_pracownikow)
+# print('prac1.liczba_pracownikow =', prac1.liczba_pracownikow)
+# print('prac2.liczba_pracownikow =', prac2.liczba_pracownikow)
+#
+# print('\n --- wysokość podwyżki ---')
+# print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
+# print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
+# print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
+#
+# print('\n--- zmieniamy wys podwyzki na 8 ---')
+# Pracownik.roczna_podwyzka = 8
+# print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
+# print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
+# print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
+#
+# print('\n--- Patrzymy w namespace (__dict__) i widzimy do jakich atrybutow maja dostęp ---')
+# print('\nPracownik.__dict__:\n',Pracownik.__dict__)
+# print('\nprac1.__dict__:\n',prac1.__dict__)
+# print('\nprac2.__dict__:\n',prac2.__dict__)
+#
+# print('\nJak widzimy instancje nie mają pola roczna_podwyzka, dlatego szukaja go wyzej w klasie')
+#
+# print('\n--- zmieniamy wys podwyzki w instancji prac2 na 12 ---')
+# print('Jak widać wyżej, w __dict__ instancji prac2 nie ma pola roczna_podwyzka')
+# prac2.roczna_podwyzka = 12
+# print('Pracownik.roczna_podwyzka =',Pracownik.roczna_podwyzka)
+# print('prac1.roczna_podwyzka =',prac1.roczna_podwyzka)
+# print('prac2.roczna_podwyzka', prac2.roczna_podwyzka)
+# print('\nWidzimy, ze wartosc zmienila sie tylko dla instancji prac2.')
+# print("Zajrzyjmy jeszcze raz do namespace'ów:")
+# print('\nPracownik.__dict__:\n',Pracownik.__dict__)
+# print('\nprac1.__dict__:\n',prac1.__dict__)
+# print('\nprac2.__dict__:\n',prac2.__dict__)
+#
+# print('Jak widzimy, teraz obiekt prac2 ma własną zmienną roczna_podwyzka, i z niej bedzie brac wartosc.')
+# print('Obiekt prac1 nie ma takiej zmiennej, wiec dalej bedzie korzystac z wartosci w polu klasy\n')
+#
+# # del (prac2.roczna_podwyzka)
+# print('--- Usuwamy pracownika prac2 ---')
+# del prac2
+# print(Pracownik.liczba_pracownikow)
+#
+# print('\n--- Teraz program się kończy i Python sam usuwa wszystkie pozostałe obiekty ---')
+# print('--- Automatycznie wywoła destruktor __del__ dla pozostałych obiektów: ---\n')

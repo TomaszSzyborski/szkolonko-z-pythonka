@@ -5,7 +5,8 @@
 # import funkcje_9
 
 # import relatywny - szczególna funkcja
-from funkcje_9 import pole_prostokat
+# from funkcje_9 import pole_prostokat
+from stage_2.blok_1.functions.funkcje_9 import pole_prostokat
 
 bok_a = float(input("Podaj bok <a> prostokąta: "))
 bok_b = float(input("Podaj bok <b> prostokąta: "))

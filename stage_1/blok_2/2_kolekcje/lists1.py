@@ -1,8 +1,23 @@
 # deklarowanie list
+from typing import Final
+
 lista = []
 lista1 = [2, 3, 4, 5, 6, 7, 8]
+tupla1 = (2, 3, 4, 5, 6, 7, 8)
 lista2 = ["kwiatek", "woda", "doniczka", "ziemia"]
+MOJA_STALA = 3.14
+_MOJA_STALA: Final[float] = 3.1415
+lista3: list[int] = [2, 3, 4, 5, 6, 7, 8]
 
+print(lista3)
+print(lista1)
+lista1.append(9)
+print(lista1)
+
+print(tupla1)
+# tupla1[0] = 999
+# tupla1.append(9)
+print(tupla1)
 # konstruktor
 zakres = range(2,5)
 print(zakres)
@@ -20,9 +35,9 @@ print(lista_imie)
 
 print(len(lista4))
 
-syntactic sugar
-sweet_list = [element for element in lista_imie]
-print(sweet_list)
+# syntactic sugar
+sweet_list = [element.upper() for element in lista_imie]
+print(f"Wielkie litery: {sweet_list}")
 
 # kwadraty = [x**2 for x in range(101)]
 #print(kwadraty)
@@ -45,7 +60,7 @@ print(sweet_list)
 # lista do str
 s = ["s", "a", "b", "4"]
 
-wyraz = "".join(s)
+wyraz = "\n".join(s)
 print(wyraz)
 
 

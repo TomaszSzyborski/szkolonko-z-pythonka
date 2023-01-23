@@ -34,3 +34,5 @@ print("=" * 80)
 print(f"{comment_one=}")
 print(f"{comment_three=}")
 print(f"{comment_one == comment_three=}")
+
+print(comment_one.to_json())

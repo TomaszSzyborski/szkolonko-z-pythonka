@@ -10,4 +10,14 @@ wynik = kwadrat(2)
 
 print("Wynik:", wynik)
 
+from typing import Final
 
+_IMIE: Final[str] = "tomek"
+
+# argument domyslny jest typem wartosciowym
+def duza_litera(imie="tomek"):
+    global _IMIE
+    # ta zmienna imie jest tylko w zakresie funkcji
+    imie = imie.capitalize()
+    _IMIE = _IMIE.capitalize()
+    return _IMIE

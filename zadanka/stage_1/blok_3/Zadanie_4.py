@@ -10,3 +10,7 @@ zawierające odpowiednie rekordy z pliku dane_osobowe.csv
 
 Hint - możesz użyć biblioteki faker
 """
+from zadanka.stage_1.blok_3.Zadanie_3 import calculate_bmi
+
+koszykarz_bmi = calculate_bmi(180, 2.2)
+print(f"{koszykarz_bmi=}")

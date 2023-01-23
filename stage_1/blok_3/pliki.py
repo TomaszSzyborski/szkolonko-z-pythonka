@@ -26,10 +26,10 @@ finally:
 # |    |       |       |        |              operator przypisania obiektu zwróconego przez funkcje `open`
 # |    |       |       |        |              |  jako zmienna `f`
 # V    V       V       V        V              V  V
-with open("test.txt", 'w', encoding='utf-8') as f:
-    f.write("my first file\n")
-    f.write("This file\n\n")
-    f.write("contains three lines\n")
+with open("test.txt", 'w', encoding='utf-8') as file:
+    file.write("my first file\n")
+    file.write("This file\n\n")
+    file.write("contains three lines\n")
 
 # odczyt z pliku
 with open("test.txt", 'r', encoding='utf-8') as f:
@@ -61,5 +61,5 @@ dane = {
 # możemy zapisywać słowniki do jsona
 import json
 
-with open('dane.json', mode='w', encoding='utf-8') as f:
+with open('dane.json', encoding='utf-8', mode='w') as f:
     json.dump(dane, f)

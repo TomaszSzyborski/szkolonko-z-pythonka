@@ -1,11 +1,15 @@
 # ta zmienna imie jest w zakresie globalnym
-imie = "ola"
+from typing import Final
+
+_IMIE: Final[str] = "ola"
 
 # argument domyslny jest typem wartosciowym
 def duza_litera(imie="ala"):
+    global _IMIE
     # ta zmienna imie jest tylko w zakresie funkcji
     imie = imie.capitalize()
-    return imie
+    # _IMIE = _IMIE.capitalize()
+    return _IMIE
 
 print("Argument domyślny:")
 print(duza_litera())
@@ -15,5 +19,5 @@ print(duza_litera("tomasz"))
 
 
 print("Zmienna globalna:")
-print(imie)
+print(_IMIE)
 

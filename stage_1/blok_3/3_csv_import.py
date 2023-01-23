@@ -1,7 +1,7 @@
 # do pracy z plikami csv mozna uzyc modulu wbudowanego
 import csv
 
-with open('osoby') as plik:
+with open('osoby.csv') as plik:
     # tworzymy czytnik pliku csv
     czytnik = csv.reader(plik)
 
@@ -11,7 +11,7 @@ with open('osoby') as plik:
 
 dane = ['Bartek', 'Mojo', 33]
 
-with open('osoby', 'a') as plik:
+with open('osoby.csv', 'a') as plik:
     # tworzymy zapisywacz pliku csv
     zapisywacz = csv.writer(plik)
 

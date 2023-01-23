@@ -13,10 +13,10 @@ print(zakupy_styczen)
 """
 sprawdźmy rózne metody kopiowania kolekcji
 """
-zakupy_luty = zakupy_styczen
+# zakupy_luty = zakupy_styczen
 # zakupy_luty = copy.copy(zakupy_styczen)
 # zakupy_luty = zakupy_styczen[:]
-# zakupy_luty = copy.deepcopy(zakupy_styczen)
+zakupy_luty = copy.deepcopy(zakupy_styczen)
 print("Zakupy w lutym (kopia) ze stycznia: ")
 print(zakupy_luty)
 

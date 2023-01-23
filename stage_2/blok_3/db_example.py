@@ -35,8 +35,8 @@ q = Query()
 lots_of_items = db.search(q.quantity > 40)
 print(lots_of_items)
 
-print("Clearing the database")
-db.drop_tables()
-print("After clearing")
-print(db.all())
+# print("Clearing the database")
+# db.drop_tables()
+# print("After clearing")
+# print(db.all())
 

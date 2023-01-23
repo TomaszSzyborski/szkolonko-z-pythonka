@@ -7,8 +7,8 @@ from selene.support.shared.jquery_style import s, ss
 
 from boardgamegeek_commons import Game
 
-
 def add_game(game: Game):
+
     s("a [alt='Add a Game']").click()
     s("input[name='geekitemname']").type(game.title)
     ss(".searchbox_results_title + *") \

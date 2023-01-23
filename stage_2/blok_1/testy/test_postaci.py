@@ -1,6 +1,28 @@
 from pytest import fixture
 from pytest import mark
+
 from stage_2.blok_1.testy.rpg_characters_inheritance import Villain, CharacterState as cs
+
+
+@fixture(scope="session", autouse=True)
+def example_session():
+    print("session start".center(50, "-"))
+    yield
+    print("session end".center(50, "-"))
+
+
+@fixture(scope="module", autouse=True)
+def example_module():
+    print("module start".center(50, "#"))
+    yield
+    print("module end".center(50, "#"))
+
+
+@fixture(scope="function", autouse=True)
+def example_function():
+    print("function start".center(50, "%"))
+    yield
+    print("function end".center(50, "%"))
 
 
 @fixture

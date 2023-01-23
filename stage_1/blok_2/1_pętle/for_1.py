@@ -1,6 +1,6 @@
-x = range(5)
+index = range(5)
 
-for i in x:
+for i in index:
     print(i)
 
 for c in "Anna":
@@ -46,7 +46,7 @@ print(lista)
 for i in range(len(lista)):
     print(i, lista[i])
 
-for x, y in enumerate(lista):
-    print(x, y)
+for index, element in enumerate(lista):
+    print(index, element)
 
 print(list(enumerate(lista)))

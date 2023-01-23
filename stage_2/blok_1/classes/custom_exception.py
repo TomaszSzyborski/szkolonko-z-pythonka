@@ -26,7 +26,7 @@ class HeightOutOfRangeException(Exception):
 
 
 def bmi(m, w):
-    if w < 0.2 or w < 2.5:
+    if w < 0.2 or w > 2.5:
         raise HeightOutOfRangeException
     return round(m / pow(w, 2), 2)
 

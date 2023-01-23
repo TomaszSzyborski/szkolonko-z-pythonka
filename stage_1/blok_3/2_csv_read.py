@@ -1,6 +1,6 @@
 baza_osob = []
 
-with open('osoby', 'r') as plik:
+with open('osoby.csv', 'r') as plik:
     # pierwsza linijka jest opisem kolumn dlatego wczytujemy ja
     # do oddzielnej listy
     opisy_kolumn = plik.readline()

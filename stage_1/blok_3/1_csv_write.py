@@ -12,5 +12,5 @@ dane_do_zapisu = ','.join(osoba_str)
 
 # otwieram plik w trybie do dopisywania
 with open('osoby.csv', 'a') as plik:
-    plik.write(dane_do_zapisu + '\n')
+    plik.write(f"{dane_do_zapisu}\n")
 

@@ -32,3 +32,9 @@
 1. REST with Requests
 2. Web Automation with Selene
 3. Simple DB with TinyDB
+
+W razie klopotów środowiska uruchomieniowego lokalnie można użyć wirtualnego VSCode"
+
+https://gitpod.io/workspaces
+
+Presentation Assistant

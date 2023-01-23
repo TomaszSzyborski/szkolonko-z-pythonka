@@ -1,7 +1,7 @@
 import requests as r
 
-animal = "dog"
-if animal =="cat":
+animal = "cat"
+if animal == "cat":
     url = "https://http.cat/"
 else:
     url = "https://httpstatusdogs.com/img/"

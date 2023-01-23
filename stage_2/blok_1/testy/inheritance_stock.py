@@ -1,5 +1,4 @@
 from abc import ABC
-from typing import Protocol
 
 
 class Item(ABC):
@@ -8,10 +7,27 @@ class Item(ABC):
         self.price = price
 
 
+# class Color(ABC):
+#     def __init__(self, color):
+#         self.color = color
+#
+#
+# class Hair(Color):
+#     def __init__(self, color, length):
+#         super().__init__(color)
+#         self.length = length
+
+
 class Product(Item):
     def __init__(self, name: str, quantity: float, price: float):
         super().__init__(quantity, price)
         self.name = name
+
+
+class Stock(Item):
+    def __init__(self, product_name, quantity, price):
+        super().__init__(quantity, price)
+        self.product_name = product_name
 
 
 def calculate_total(items: list[Item]) -> float:
@@ -25,13 +41,6 @@ total = calculate_total([
 ])
 
 print(total)
-
-
-class Stock(Item):
-    def __init__(self, product_name, quantity, price):
-        super().__init__(quantity, price)
-        self.product_name = product_name
-
 
 # calculate total an inventory list
 total = calculate_total([

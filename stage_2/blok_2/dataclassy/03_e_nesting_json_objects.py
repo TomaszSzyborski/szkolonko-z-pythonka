@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
-from utils.fake_factory import fake
+
+from stage_2.blok_2.utils.fake_factory import fake
 
 
 @dataclass_json
@@ -38,7 +39,8 @@ assert Boss.from_json(boss_json) == boss
 @dataclass(frozen=True)
 class Minion:
     name: str
-    hp: int = field(default_factory=lambda: fake.pydecimal(positive=True, right_digits=0, min_value=5, max_value=10))
+    hp: int = field(default_factory=lambda: int(fake.pydecimal(positive=True, right_digits=0,
+                                                               min_value=5, max_value=10)))
     colour: str = field(default_factory=fake.color_name)
 
 
@@ -46,9 +48,13 @@ class Minion:
 @dataclass(frozen=True)
 class Boss:
     minions: list[Minion]
-    hp: int = field(default_factory=lambda: fake.pydecimal(positive=True, right_digits=0, min_value=15, max_value=20))
+    hp: int = field(default_factory=lambda: int(fake.pydecimal(positive=True, right_digits=0,
+                                                               min_value=15, max_value=20)))
 
+minion = Minion('evil minion')
+print(minion.to_json(indent=4))
 
-boss = Boss([Minion('evil minion'), Minion('very evil minion')])
+boss = Boss([Minion('evil minion'), Minion('very evil minion')], 10000)
 
 print(boss)
+print(boss.to_json(indent=4))
