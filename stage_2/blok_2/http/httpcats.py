@@ -2,11 +2,11 @@ import requests as r
 
 animal = "cat"
 if animal == "cat":
-    url = "https://http.cat/"
+    url = "https://http.cat"
 else:
-    url = "https://httpstatusdogs.com/img/"
+    url = "https://http.dog"
 
-resp = r.get(f"{url}200.jpg")
+resp = r.get(f"{url}/200.jpg")
 print(resp.headers)
 print(resp.content)
 
